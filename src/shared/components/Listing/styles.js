@@ -33,7 +33,7 @@ export const Content = styled.div`
   grid-auto-rows: auto;
   gap: 1rem;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -76,5 +76,3 @@ export const Img = styled.img`
 `;
 
 export const Login = styled.div``;
-
-
