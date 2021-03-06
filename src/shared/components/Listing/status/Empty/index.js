@@ -9,7 +9,7 @@ const Empty = ({ emptyMessage }) => (
     <WrapperError>
       <Icon icon={faWind} />
       <Title>
-        {emptyMessage || 'There\'s nothing here.'}
+        {emptyMessage || 'There\'s nothing here'}
       </Title>
     </WrapperError>
   </Wrapper>

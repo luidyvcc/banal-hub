@@ -5,4 +5,5 @@ export const Wrapper = styled.div`
   background: ${props => props.theme.colorE};
   padding: 1rem;
   border-radius: 0.5rem;
+  grid-column: ${props => props.gridcolumn};
 `;

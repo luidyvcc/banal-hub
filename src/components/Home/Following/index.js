@@ -6,11 +6,11 @@ import { thunks } from './store/thunk';
 
 import Listing from '../../../shared/components/Listing';
 
-const Followers = () => {
+const Following = () => {
   const dispatch = useDispatch();
-  const data = useSelector(state => state.home.followers.data);
-  const errorMessage = useSelector(state => state.home.followers.errorMessage);
-  const isLoading = useSelector(state => state.home.followers.isLoading);
+  const data = useSelector(state => state.home.following.data);
+  const errorMessage = useSelector(state => state.home.following.errorMessage);
+  const isLoading = useSelector(state => state.home.following.isLoading);
   const username = useSelector(state => state.home.search.username);
   const status = useSelector(state => state.home.search.status);
 
@@ -20,9 +20,8 @@ const Followers = () => {
 
   return (
     <Listing
-      title="Followers"
+      title="Following"
       icon={faRunning}
-      invertIcon
       data={data}
       errorMessage={errorMessage}
       isLoading={isLoading}
@@ -30,4 +29,4 @@ const Followers = () => {
   );
 }
 
-export default Followers;
+export default Following;

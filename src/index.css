@@ -1,5 +1,6 @@
 :root {
   font-size: 10px;
+  color: #283e65;
 }
 
 body {
@@ -14,4 +15,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:focus {
+  outline: #283e65 auto 1px;
 }

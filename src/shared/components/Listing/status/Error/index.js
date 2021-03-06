@@ -9,7 +9,7 @@ const Error = ({ errorMessage }) => (
     <WrapperError>
       <Icon icon={faFrown} />
       <Title>
-        {errorMessage || 'Oops, an error occurred, please try again later or contact our support.'}
+        {errorMessage || 'Oops, an error occurred, please try again later or contact our support'}
       </Title>
     </WrapperError>
   </Wrapper>

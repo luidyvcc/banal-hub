@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@rocketseat/unform": "^1.6.2",
     "immutable": "^4.0.0-rc.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

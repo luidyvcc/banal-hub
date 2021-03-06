@@ -7,7 +7,7 @@ export const actions = createActions(
     RECEIVE: items => items,
     FAILURE: error => error,
   },
-  { prefix: 'HOME/FOLLOWERS' }
+  { prefix: 'HOME/FOLLOWING' }
 );
 
 const INITIAL_STATE = new Record();
