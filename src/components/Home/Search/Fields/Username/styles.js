@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Form as FormR, Input as InputR } from '@rocketseat/unform';
 
 export const Form = styled(FormR)`
@@ -43,8 +41,8 @@ export const WrapperIcon = styled.button.attrs(() => ({
   }
 `;
 
-export const IconSearch = styled(Icon).attrs(() => ({
-  icon: faSearch
+export const Icon = styled.i.attrs(() => ({
+  className: 'fas fa-search'
 }))`
   color: ${props => props.theme.colorA};
   :hover {

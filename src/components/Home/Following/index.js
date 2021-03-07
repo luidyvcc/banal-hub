@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { faRunning } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { thunks } from './store/thunk';
@@ -21,7 +20,7 @@ const Following = () => {
   return (
     <Listing
       title="Following"
-      icon={faRunning}
+      icon="fas fa-running"
       data={data}
       errorMessage={errorMessage}
       isLoading={isLoading}

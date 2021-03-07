@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actions } from '../../store/duck';
 
-import { Form, Label, Input, WrapperIcon, IconSearch } from './styles';
+import { Form, Label, Input, WrapperIcon, Icon } from './styles';
 
 const Username = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Username = () => {
         Search:
         <Input name="username" defaultValue="mauro" />
       </Label>
-      <WrapperIcon><IconSearch /></WrapperIcon>
+      <WrapperIcon><Icon /></WrapperIcon>
     </Form>
   );
 };

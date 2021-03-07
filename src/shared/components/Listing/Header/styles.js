@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Icon = styled(FontAwesomeIcon)`
+export const Icon = styled.i.attrs(props => ({
+  className: props.icon
+}))`
   transform: ${props => props.invertIcon && 'scaleX(-1)'};
 `;
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Wrapper = styled.div`
   display: grid;
@@ -8,7 +7,9 @@ export const Wrapper = styled.div`
   height: 100%;
 `;
 
-export const Icon = styled(FontAwesomeIcon)`
+export const Icon = styled.i.attrs(props => ({
+  className: props.icon
+}))`
   font-size: 10rem;
   align-self: center;
   justify-self: center;
