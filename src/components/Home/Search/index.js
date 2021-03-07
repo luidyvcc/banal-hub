@@ -4,10 +4,10 @@ import Status from './Fields/Status';
 import Username from './Fields/Username';
 import { Wrapper } from './styles';
 
-const Search = ({ ...props }) => {
+const Search = () => {
 
   return (
-    <Wrapper {...props}>
+    <Wrapper>
       <Username />
       <Status gridcolumn="3 / 3"/>
     </Wrapper>

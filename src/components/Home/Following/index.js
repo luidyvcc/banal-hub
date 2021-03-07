@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { thunks } from './store/thunk';
-
+import Card from '../../../shared/components/Card';
 import Listing from '../../../shared/components/Listing';
 
 const Following = () => {
@@ -18,13 +18,17 @@ const Following = () => {
   }, [dispatch, username, status]);
 
   return (
-    <Listing
+    <Card
       title="Following"
       icon="fas fa-running"
       data={data}
-      errorMessage={errorMessage}
-      isLoading={isLoading}
-    />
+    >
+      <Listing
+        data={data}
+        errorMessage={errorMessage}
+        isLoading={isLoading}
+      />
+    </Card>
   );
 }
 

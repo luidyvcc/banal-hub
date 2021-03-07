@@ -1,23 +1,29 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 
-import { Wrapper } from './styles';
-import Header from './Header';
-import Body from './Body';
+import { Wrapper, WrapperImg, Item, Login, Img } from './styles';
+import Error from './status/Error';
+import Loading from './status/Loading';
+import Empty from './status/Empty';
 
-const Listing = ({ title, icon, data = [], errorMessage, isLoading, invertIcon }) => (
-  <Wrapper>
-    <Header
-      title={title}
-      icon={icon}
-      data={data}
-      invertIcon={invertIcon}
-    />
-    <Body
-      data={data}
-      errorMessage={errorMessage}
-      isLoading={isLoading}
-    />
-  </Wrapper>
-);
+const Listing = ({ data, errorMessage, isLoading }) => {
+  const getItems = useCallback(() => (
+    data.map(item => (
+      <Item key={item.id}>
+        <WrapperImg><Img src={item.avatar_url} /></WrapperImg>        
+        <Login>{item.login}</Login>
+      </Item>
+    ))
+  ), [data]);
+
+  return (
+    <Wrapper>
+      {isLoading ? <Loading /> : <>
+        {errorMessage ? <Error /> : <>
+          {data.length ? getItems() : <Empty />}
+        </>}
+      </>}
+    </Wrapper>
+  );
+}
 
 export default memo(Listing);

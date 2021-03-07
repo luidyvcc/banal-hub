@@ -4,28 +4,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { thunks } from './store/thunk';
 
 import Card from '../../../shared/components/Card';
-import Listing from '../../../shared/components/Listing';
+import Profile from '../../../shared/components/Profile';
 
-const Followers = () => {
+const CurrentProfile = () => {
   const dispatch = useDispatch();
-  const data = useSelector(state => state.home.followers.data);
-  const errorMessage = useSelector(state => state.home.followers.errorMessage);
-  const isLoading = useSelector(state => state.home.followers.isLoading);
+  const data = useSelector(state => state.home.profile.data);
+  const errorMessage = useSelector(state => state.home.profile.errorMessage);
+  const isLoading = useSelector(state => state.home.profile.isLoading);
   const username = useSelector(state => state.home.search.username);
   const status = useSelector(state => state.home.search.status);
 
   useEffect(() => {
-    if (username) dispatch(thunks.getAll(username, status));
+    if (username) dispatch(thunks.fetchProfile(username, status));
   }, [dispatch, username, status]);
 
   return (
     <Card
-      title="Followers"
-      icon="fas fa-running"
+      title="Profile"
+      icon="fas fa-user"
       data={data}
-      invertIcon
     >
-      <Listing
+      <Profile
         data={data}
         errorMessage={errorMessage}
         isLoading={isLoading}
@@ -34,4 +33,4 @@ const Followers = () => {
   );
 }
 
-export default Followers;
+export default CurrentProfile;

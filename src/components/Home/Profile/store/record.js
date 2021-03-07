@@ -1,6 +1,8 @@
 import { Record as RecordImmutable } from 'immutable';
 
 export const Record = RecordImmutable({
-  username: 'luidyvcc',
-  status: 'none',
+  isLoading: false,
+  errorMessage: '',
+  successMessage: '',
+  data: {},
 });

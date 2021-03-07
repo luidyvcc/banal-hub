@@ -8,15 +8,15 @@ import Cell from '../../shared/components/Grid/Cell';
 import Followers from './Followers';
 import Following from './Following';
 import Search from './Search';
-import Dog from './Dog';
+import Profile from './Profile';
 
 const Home = () => (
   <Section>
     <Container title="BanalHub">
       <Grid>
-        <Search gridcolumn="1 / span 3"/>
+        <Search />
         <Cell><Followers /></Cell>
-        <Cell><Dog /></Cell>
+        <Cell><Profile /></Cell>
         <Cell><Following /></Cell>
       </Grid>
     </Container>

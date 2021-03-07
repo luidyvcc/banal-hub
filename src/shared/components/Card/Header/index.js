@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import { Wrapper, Circle, Icon } from './styles';
 
-const Listing = ({ title, icon, data = [], invertIcon }) => {
+const Header = ({ title, icon, data = [], invertIcon }) => {
   const length = data.length;
   return (
     <Wrapper>
@@ -15,4 +15,4 @@ const Listing = ({ title, icon, data = [], invertIcon }) => {
   );
 }
 
-export default memo(Listing);
+export default memo(Header);
