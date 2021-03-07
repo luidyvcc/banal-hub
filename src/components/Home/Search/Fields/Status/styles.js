@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { Form as FormR, Select  as SelectR } from '@rocketseat/unform';
 
 export const Form = styled(FormR)`
@@ -7,9 +8,17 @@ export const Form = styled(FormR)`
   padding: 1rem;
   grid-column: ${props => props.gridcolumn};
   font-size: 1.6rem;
+
   position: absolute;
   right: 2rem;
   top: 2rem;
+
+  ${media.lessThan("medium")`
+    grid-column: unset;
+    position: unset;
+    right: unset;
+    top: unset;
+  `}
 `;
 
 export const Label = styled.label`

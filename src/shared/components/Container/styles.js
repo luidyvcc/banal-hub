@@ -1,9 +1,19 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
   width: 75%;  
   padding: 2rem;
   margin: auto;
+
+  ${media.lessThan("large")`
+    width: 85%;
+    padding: 0.5rem;
+  `}
+  
+  ${media.lessThan("medium")`
+    width: 95%;
+  `}
 `;
 
 export const Title = styled.div`
