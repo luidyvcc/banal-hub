@@ -5,15 +5,15 @@ import Error from './status/Error';
 import Loading from './status/Loading';
 import Empty from './status/Empty';
 
-const Listing = ({ data, errorMessage, isLoading }) => {
+const Listing = ({ data, errorMessage, isLoading, onClick = () => {} }) => {
   const getItems = useCallback(() => (
     data.map(item => (
-      <Item key={item.id}>
+      <Item key={item.id} onClick={() => onClick(item.login)}>
         <WrapperImg><Img src={item.avatar_url} /></WrapperImg>        
         <Login>{item.login}</Login>
       </Item>
     ))
-  ), [data]);
+  ), [data, onClick]);
 
   return (
     <Wrapper>

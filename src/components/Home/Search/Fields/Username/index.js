@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actions } from '../../store/duck';
 
@@ -8,9 +8,9 @@ const Username = () => {
   const dispatch = useDispatch();
   const username = useSelector(state => state.home.search.username);
 
-  const handleSubmit = data => {
+  const handleSubmit = useCallback(data => {
     dispatch(actions.setUsername(data.username));
-  }
+  }, [dispatch]);
 
   return (
     <Form onSubmit={handleSubmit} initialData={{ username }}>
