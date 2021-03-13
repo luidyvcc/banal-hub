@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Wrapper = styled.div`
   display: grid;
@@ -54,7 +53,7 @@ export const WrapperImg = styled.div`
   height: 2.2rem;
 `;
 
-export const Img = styled(LazyLoadImage)`
+export const Img = styled.img`
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50pc;
