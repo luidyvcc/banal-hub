@@ -12,7 +12,7 @@ import Profile from './Profile';
 
 const Home = () => (
   <Section>
-    <Container title="BanalHub">
+    <Container title="BanalHub Staging">
       <Grid>
         <Search />
         <Cell><Followers /></Cell>
